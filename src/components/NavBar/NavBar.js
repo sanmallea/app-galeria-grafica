@@ -3,6 +3,13 @@ import './NavBar.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import CartWidget from '../CartWidget/CartWidget';
+
+//import {navBarOptions} from '../../helpers/strings'; 
+//Esto de aca es la correccion que me hizo a mi, no le des bola
+
+//Aca no hubieron muchos cambios, solamente lo del carrito que tiene su archivo aparte, aunque si lo nombro aca abaho: CartWidget (aparte de
+// ponerlo arriba en el import)
 
 const NavBar = () => {
     return (
@@ -28,6 +35,7 @@ const NavBar = () => {
                         <button>Contacto</button>
                     </li>
                 </ul>
+                <CartWidget />
             </Toolbar>
         </AppBar>
     )
