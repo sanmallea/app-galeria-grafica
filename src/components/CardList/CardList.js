@@ -1,5 +1,3 @@
-//Esto es tal cual lo que se muestra en la app. Agarra la informacion de Card.js y la mete en las boxes del producto
-
 import CardItem from '../Card/Card';
 import {Grid} from '@mui/material'
 
