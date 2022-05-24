@@ -16,3 +16,11 @@
     margin-bottom: 10px;
     font-size: 25px;
 }
+.count-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
