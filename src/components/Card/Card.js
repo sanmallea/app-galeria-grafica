@@ -4,7 +4,7 @@ import './Card.css';
 import Modal from '../Modal/Modal';
 import ItemCount from './ItemCount.js';
 
-const CardItem = ({ image, title, price, size }) => {
+const CardItem = ({ image, title, price, size, stock }) => {
 
     return(
         <Card sx={{ minWidth: 275 }}>
