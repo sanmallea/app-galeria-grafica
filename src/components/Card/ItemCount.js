@@ -21,7 +21,7 @@ const ItemCount = () => {
             <Button onClick={restCount} disabled={count == 1}>-</Button>
             <p>{count}</p>
             <Button onClick={addCount} disabled={count == stock}>+</Button>
-            <Button onClick={console.log(count)} variant={'contained'}>Comprar</Button>
+            <Button onClick={console.log(count)} variant={'contained'} className='buy-button'>Comprar</Button>
         </div>
     )
 }
