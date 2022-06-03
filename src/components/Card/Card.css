@@ -16,6 +16,33 @@
     margin-bottom: 10px;
     font-size: 25px;
 }
+
+.card-item__img-box a:link{
+    text-decoration: none;
+    color: black;
+}
+.card-item__img-box a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.card-item__img-box a:hover{
+    color: yellow;
+}
+
+.card-item__img-box button{
+    background-color: gainsboro;
+    padding: 15px;
+    font-size: 15px;
+    transition-duration: 0.8s;
+    width: 100%;
+    border: 1px solid;
+}
+.card-item__img-box button:hover {
+    background-color:#333;
+    color: yellow;
+}
+
 .count-item {
     display: flex;
     width: 100%;

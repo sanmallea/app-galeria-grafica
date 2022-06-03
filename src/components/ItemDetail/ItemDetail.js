@@ -3,7 +3,6 @@ import { MenuItem, Select } from '@mui/material';
 import { useState } from 'react';
 import ItemCount from '../Card/ItemCount';
 
-
 const ItemDetail = ({data}) => {
 
     const [size, setSize] = useState('');
@@ -16,7 +15,7 @@ const ItemDetail = ({data}) => {
     return(
         <div className='detail-product-container'>
             <div className='detail-product-image'>
-                <img src={`./${data.image}`} />
+                <img src={`./productos/${data.image}`} />
             </div>
             
             <div className='detail-product-info'>
@@ -36,7 +35,7 @@ const ItemDetail = ({data}) => {
                     id="demo-simple-select"
                     value={size}
                     placeholder="Selecciona tu medida"
-                    onChange={handleChange}
+                    onChange={(e) => handleChange(e)}
                     >
                     <MenuItem value={'30cm x 30cm'}>30cm x 30cm</MenuItem>
                     <MenuItem value={'40cm x 40cm'}>40cm x 40cm</MenuItem>

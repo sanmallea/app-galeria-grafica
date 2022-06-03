@@ -37,6 +37,7 @@
     width: 100%;
     transition-duration: 0.4s;
 }
+
 .navstyle button:hover {
     background-color:#333;
     color: yellow;
@@ -47,4 +48,16 @@
 .custom-cart-logo {
     float: right;
     width: 120px;
+}
+#button-link {
+    color: black;
+    float: left;
+    font-size: 15px;
+    margin-right: 20px;
+    width: 50%;
+    transition-duration: 0.8s;
+}
+#button-link:hover {
+    background-color:#333;
+    color: yellow;
 }

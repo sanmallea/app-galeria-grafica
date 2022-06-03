@@ -2,8 +2,8 @@ import React from 'react'
 import './NavBar.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 //import {navBarOptions} from '../../helpers/strings'; 
 
@@ -12,23 +12,33 @@ const NavBar = () => {
         <AppBar position="static" className="navstyle">
             <Toolbar className='toolbarcolor'>
                 <div className='navbar-logo'>
-                    <img src='./logo galeria grafica blanco.png'></img>
+                    <img src='./logo galeria grafica blanco.png' Link to={'/'}></img>
                 </div>
                 <ul>
                     <li>
-                        <button>Home</button>
+                        <button>
+                            <Link to='/' id='button-link'>Home</Link>
+                        </button>
                     </li>
                     <li>
-                        <button>Fondos</button>
+                        <button>
+                            <Link to='/fondos' id='button-link'>Fondos</Link>
+                        </button>
                     </li>
                     <li>
-                        <button>Gigantografias</button>
+                        <button>
+                            <Link to='/gigantografias' id='button-link'>Gigantografias</Link>
+                        </button>
                     </li>
                     <li>
-                        <button>Stickers</button>
+                        <button>
+                            <Link to='/stickers' id='button-link'>Stickers</Link>
+                        </button>
                     </li>
                     <li>
-                        <button>Contacto</button>
+                            <button>
+                                <Link to="/contact" id='button-link'>Contacto</Link>
+                            </button>
                     </li>
                 </ul>
                 <CartWidget />
