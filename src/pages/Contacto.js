@@ -1,6 +1,10 @@
 const Contacto = () => {
     return(
+        <>
         <div>PAGINA CONTACTO</div>
+        </>
+
+
     )
 }
 

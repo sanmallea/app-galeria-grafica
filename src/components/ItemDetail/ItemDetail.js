@@ -1,7 +1,8 @@
 import './ItemDetail.css';
-import { MenuItem, Select } from '@mui/material';
+import { MenuItem, Select, Button } from '@mui/material';
 import { useState } from 'react';
 import ItemCount from '../Card/ItemCount';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({data}) => {
 
@@ -10,6 +11,11 @@ const ItemDetail = ({data}) => {
     const handleChange = (event) => {
         setSize(event.target.value);
     };
+
+    const [showButton, setShowButton] = useState(false)
+
+    //Definir cantidad
+    const [cantidad, setCantidad] = useState(1)
 
 
     return(
@@ -41,9 +47,15 @@ const ItemDetail = ({data}) => {
                     <MenuItem value={'40cm x 40cm'}>40cm x 40cm</MenuItem>
                 </Select>
 
+                {!showButton ?
                 <div className='detail-product-counter'>
-                    <ItemCount />
+                    <ItemCount 
+                        actualizarCantidad={setCantidad}
+                        cantidad={cantidad}
+                        setShowButton={setShowButton}/>
                 </div>
+                :
+                <Button className='final-buy' variant={'contained'}><Link to= '/cart'>Finalizar mi Compra</Link></Button>}
 
             </div>
         </div>
