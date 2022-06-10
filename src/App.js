@@ -9,23 +9,29 @@ import Detalle from './pages/Detalle';
 import Fondos from './pages/Fondos';
 import Gigantografias from './pages/Gigantografias';
 import Stickers from './pages/Stickers';
+import ThemeProvider from './context/ThemeContext'
+import {CartProvider} from './context/CartContext'
 
 function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-      <NavBar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/contact' element={<Contacto />} />
-          <Route path='/fondos' element={<Fondos />} />
-          <Route path='/gigantografias' element={<Gigantografias />} />
-          <Route path='/stickers' element={<Stickers />} />
-          <Route path='*' element={<h1> 404 - PAGE NOT FOUND </h1>} />
-          <Route path='/product/:id' element={<Detalle />} />
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <ThemeProvider>
+          <BrowserRouter>
+          <NavBar />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/contact' element={<Contacto />} />
+              <Route path='/fondos' element={<Fondos />} />
+              <Route path='/gigantografias' element={<Gigantografias />} />
+              <Route path='/stickers' element={<Stickers />} />
+              <Route path='*' element={<h1> 404 - PAGE NOT FOUND </h1>} />
+              <Route path='/product/:id' element={<Detalle />} />
+            </Routes>
+          </BrowserRouter>
+        </ThemeProvider>
+      </CartProvider>
     </div>
   );
 }

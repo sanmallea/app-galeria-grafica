@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Button } from '@mui/material';
 import './Card.css';
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 
 const ItemCount = ({actualizarCantidad, setShowButton}) => {
     //Sumar o restar productos
@@ -22,9 +22,13 @@ const ItemCount = ({actualizarCantidad, setShowButton}) => {
             <Button onClick={restCount} disabled={count == 1}>-</Button>
             <p>{count}</p>
             <Button onClick={addCount} disabled={count == stock}>+</Button>
-            <Button variant={'contained'} onClick={() => setShowButton(true)}>Agregar</Button>
+            <Button variant={'contained'} 
+                    onClick={() => setShowButton(true)}
+                    >Agregar</Button>
         </div>
     )
 }
 
 export default ItemCount
+
+//setShowButton(true),
