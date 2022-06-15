@@ -11,6 +11,7 @@ import Gigantografias from './pages/Gigantografias';
 import Stickers from './pages/Stickers';
 import ThemeProvider from './context/ThemeContext'
 import {CartProvider} from './context/CartContext'
+import Cart from './pages/Cart';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
               <Route path='/stickers' element={<Stickers />} />
               <Route path='*' element={<h1> 404 - PAGE NOT FOUND </h1>} />
               <Route path='/product/:id' element={<Detalle />} />
+              <Route path='/cart' element={<Cart />} />
             </Routes>
           </BrowserRouter>
         </ThemeProvider>
