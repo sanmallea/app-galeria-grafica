@@ -2,15 +2,30 @@ import CardItem from '../Card/Card';
 import productos from '../../utils/productsMock';
 import {Grid} from '@mui/material';
 import { useState, useEffect } from 'react';
+import {collection, doc, getDocs} from 'firebase/firestore'
+import db from '../../utils/firebaseConfig'
 
 const CardList = ({title}) => {
     const [products, setProducts] = useState ([])
 
-    const getProducts = () => {
+    const getProducts = async() => {
+        
+        const productSnapshot = await getDocs(collection(db, "productos"));
+        const productList = productSnapshot.docs.map((doc) => {
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+
+        console.log(productList)
+        
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
             resolve(productos)
-        }, 2000)
+        }, 2000);
+        productList;
+
+
     })
     }
 
@@ -22,10 +37,14 @@ const CardList = ({title}) => {
             console.log("Respuesta Promesa: ", response)
             setProducts(response)
         })
+        .then ( (productos) => {
+            console.log("productos: ", productos)
+        })
         .catch ( (error) => {
             console.log("Fallo la llamada.", error)
         })
     }, [])
+
 
     return(
         <>
