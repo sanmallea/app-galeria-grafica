@@ -4,10 +4,11 @@ import Menu from '@mui/material/Menu';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../../context/CartContext'
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 import './CartWidget.css'
 
 const CartWidget = () =>  {
-    const { cartListItems } = useContext(CartContext)
+    const { cartListItems, deleteProduct } = useContext(CartContext)
 
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -57,13 +58,19 @@ const CartWidget = () =>  {
                                 <span>$ {item.price}</span>
                             </div>
                             <div className='cart-prod__action'>
-                                <button>
+                                <button onClick={() => deleteProduct(item)}>
                                     <DeleteIcon />
                                 </button>
                             </div>
                         </div>
                         )
                     })}
+
+                    <div className='cart-checkout-button'>
+                        <Link to="/cart">
+                            <button style={{cursor: 'pointer'}} onClick={handleClose}>Terminar compra</button>
+                        </Link>
+                    </div>
                     
                 </div>
             </Menu>

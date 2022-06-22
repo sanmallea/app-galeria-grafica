@@ -51,3 +51,38 @@
 .item-cart-prod:nth-last-child(1) {
     border: none;
 }
+.cart-checkout-button button{
+    background: gray;
+    width: 100%;
+    text-transform: none;
+    color: yellow;
+    padding: 15px;
+    font-size: 14px;
+    border: none;
+}
+
+.cart-checkout-button button:hover{
+    background-color: black;
+}
+.container-item-list-cart {
+    display: flex;
+    flex-direction: column;
+}
+.container-item-list-cart > p {
+    font-weight: 700;
+    text-align: center;
+}
+
+.container-item-list-cart > a {
+    background: gray;
+    text-decoration: none;
+    width: 100%;
+    text-transform: none;
+    color: yellow;
+    padding: 15px;
+    font-size: 14px;
+    border: none;
+}
+.container-item-list-cart > a:hover {
+    background-color: black;
+}

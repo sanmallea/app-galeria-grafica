@@ -15,17 +15,20 @@ const ItemDetailContainer = () => {
     /*const getItem = () => {
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
-                resolve({producto})
+                resolve({product})
             }, 2000)
         })
     }*/
 
     useEffect(() => {
-        getProducts()
-        getItem()
-        .then( (prod) =>{
+        
+        getProduct()
+        .then( (prod) => {
+            console.log("Respuesta getProduct: ", prod)
             setProduct(prod)
-        })/*
+        })
+        
+        /*
         .catch ( (error) => {
             console.log("Fallo la llamada.", error)
         })
@@ -36,12 +39,11 @@ const ItemDetailContainer = () => {
         }*/
     }, [id])
 
-    const getProducts = async() => {
+    const getProduct = async() => {
         const docRef = doc(db, "productos", id)
         const docSnaptshop = await getDoc(docRef)
         let product = docSnaptshop.data()
         product.id = docSnaptshop.id
-        console.log("docSnapshop: ", docSnaptshop.data())
         return product
     }
 

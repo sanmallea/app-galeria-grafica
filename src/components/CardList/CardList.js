@@ -2,11 +2,19 @@ import CardItem from '../Card/Card';
 import productos from '../../utils/productsMock';
 import {Grid} from '@mui/material';
 import { useState, useEffect } from 'react';
-import {collection, doc, getDocs} from 'firebase/firestore'
+import {collection, getDocs, query, where} from 'firebase/firestore'
 import db from '../../utils/firebaseConfig'
 
 const CardList = ({title}) => {
     const [products, setProducts] = useState ([])
+
+    useEffect( () => {
+        setProducts([])
+        getProducts()
+        .then( (productos) => {
+            setProducts(productos)
+        })
+    }, [])
 
     const getProducts = async() => {
         
@@ -16,14 +24,12 @@ const CardList = ({title}) => {
             product.id = doc.id
             return product
         })
-
-        console.log(productList)
         
         return new Promise( (resolve, reject) => {
             setTimeout(() => {
-            resolve(productos)
+            resolve(productList)
         }, 2000);
-        productList;
+       
 
 
     })
