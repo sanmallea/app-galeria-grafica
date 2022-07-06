@@ -1,0 +1,53 @@
+.card-item img {
+    width: 100%;
+}
+
+.card-item{
+    display: flex;
+    flex-direction: column;
+}
+.card-item p {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card-item span {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.card-item__img-box a:link{
+    text-decoration: none;
+    color: black;
+}
+.card-item__img-box a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.card-item__img-box a:hover{
+    color: yellow;
+}
+
+.card-item__img-box button{
+    background-color: gainsboro;
+    padding: 15px;
+    font-size: 15px;
+    transition-duration: 0.8s;
+    width: 100%;
+    border: 1px solid;
+}
+.card-item__img-box button:hover {
+    background-color:#333;
+    color: yellow;
+}
+
+.count-item {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}

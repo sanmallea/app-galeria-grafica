@@ -1,0 +1,11 @@
+.container img{
+    width: 100%;
+}
+.container h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 16px;
+    font-size: 25px;
+    background-color: yellow;
+    padding: 30px;
+}

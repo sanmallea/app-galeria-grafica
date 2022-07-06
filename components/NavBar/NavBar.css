@@ -1,0 +1,66 @@
+.navbar {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid green;
+}
+.navbar-logo {
+    size: 80px;
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.navbar-logo img {
+    width: 100%;
+}
+.navstyle ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+    overflow: hidden;
+}
+.navstyle li {
+    float: left;
+}
+.navstyle li a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navstyle button {
+    float: left;
+    font-size: 30px;
+    margin-right: 20px;
+    width: 100%;
+    transition-duration: 0.4s;
+}
+
+.navstyle button:hover {
+    background-color:#333;
+    color: yellow;
+}
+.toolbarcolor {
+    background-color: #333;
+}
+.custom-cart-logo {
+    float: right;
+    width: 120px;
+}
+#button-link {
+    color: black;
+    float: left;
+    font-size: 15px;
+    margin-right: 20px;
+    width: 50%;
+    transition-duration: 0.8s;
+}
+#button-link:hover {
+    background-color:#333;
+    color: yellow;
+}
+.dark-mode{
+    background-color: black !important;
+}
